@@ -1,0 +1,38 @@
+<div class="modal fade bs-example-modal-sm" id="bookModal" meetingId="-1" role="dialog"
+     aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">预定会议室</h4>
+            </div>
+            <div class="modal-body">
+                <div class="meeting-name" ></div>
+                <div class="free-time"></div>
+                <div class="chose-time">
+                    <div class="field">
+                        开始时间：
+                        <div class="input-group date"
+                             id="datetimepicker-book-bgtime">
+                            <input type="text" class="form-control"
+                                   id="book-time"><span
+                                class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        会议时长：<input type="number"  class="form-control"
+                                    placeholder="单位小时，小于2的数字"
+                                    max="2" id="book-range"
+                                    min="0"/>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal" id="confirm-cancel-btn">取消</button>
+                <button type="button" class="btn btn-primary"
+                        id="confirm-book-btn">确认</button>
+            </div>
+        </div>
+    </div>
+</div>

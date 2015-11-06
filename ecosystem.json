@@ -1,0 +1,93 @@
+{
+    /**
+     * This is a sample configuration file for PM2
+     */
+
+    /**
+     * Here we declare the apps that must be managed by PM2
+     * All options are listed here:
+     * https://github.com/Unitech/PM2/blob/master/ADVANCED_README.md#json-app-declaration
+     *
+     */
+    apps : [
+        {
+            "name": "ddmeeting-3001",
+            "max_memory_restart": "1024M",
+            "log_date_format": "YYYY-MM-DD HH:mm:ss SSS",
+            // "script": "/Users/stone/workspace/ddfe/dd-meeting/appStart.js",
+            // "out_file": "/Users/stone/workspace/ddfe/dd-meeting/log/app-3001.log",
+            // "error_file": "/Users/stone/workspace/ddfe/dd-meeting/log/err-3001.log",
+            "script": "/home/work/experiment/stone/dd-meeting/appStart.js",
+            "out_file": "/home/work/experiment/stone/dd-meeting/log/app.log",
+            "error_file": "/home/work/experiment/stone/dd-meeting/log/err-3001.log",
+            "port": "3001"
+        },
+        {
+            "name": "ddmeeting-3002",
+            "max_memory_restart": "1024M",
+            "log_date_format": "YYYY-MM-DD HH:mm:ss SSS",
+            //"script": "/Users/stone/workspace/ddfe/dd-meeting/appStart.js",
+            //"out_file": "/Users/stone/workspace/ddfe/dd-meeting/log/app-3002.log",
+            //"error_file": "/Users/stone/workspace/ddfe/dd-meeting/log/err-3002.log",
+            "script": "/home/work/experiment/stone/dd-meeting/appStart.js",
+            "out_file": "/home/work/experiment/stone/dd-meeting/log/app.log",
+            "error_file": "/home/work/experiment/stone/dd-meeting/log/err-3002.log",
+            "port": "3002"
+        },
+        {
+            "name": "ddmeeting-3003",
+            "max_memory_restart": "1024M",
+            "log_date_format": "YYYY-MM-DD HH:mm:ss SSS",
+            //"script": "/Users/stone/workspace/ddfe/dd-meeting/appStart.js",
+            //"out_file": "/Users/stone/workspace/ddfe/dd-meeting/log/app-3003.log",
+            //"error_file": "/Users/stone/workspace/ddfe/dd-meeting/log/err-3003.log",
+            "script": "/home/work/experiment/stone/dd-meeting/appStart.js",
+            "out_file": "/home/work/experiment/stone/dd-meeting/log/app.log",
+            "error_file": "/home/work/experiment/stone/dd-meeting/log/err-3003.log",
+            "port": "3003"
+        }
+        /*,
+        {
+            "name": "ddmeeting-82",
+            "max_memory_restart": "1024M",
+            "log_date_format": "YYYY-MM-DD HH:mm:ss SSS",
+            "script": "/Users/stone/workspace/ddfe/dd-meeting/appStart.js",
+            "out_file": "/Users/stone/workspace/ddfe/dd-meeting/log/app-8082.log",
+            "error_file": "/Users/stone/workspace/ddfe/dd-meeting/log/err-8082.log",
+
+            // "script": "/home/work/experiment/stone/mdd/appStart.js",
+            // "out_file": "/home/work/experiment/stone/mdd/log/app-8082.log",
+            // "error_file": "/home/work/experiment/stone/mdd/log/err-8082.log",
+            "port": "8082"
+        },
+        {
+            "name": "ddmeeting-83",
+            "max_memory_restart": "1024M",
+            "log_date_format": "YYYY-MM-DD HH:mm:ss SSS",
+
+            "script": "/Users/stone/workspace/ddfe/dd-meeting/appStart.js",
+            "out_file": "/Users/stone/workspace/ddfe/dd-meeting/log/app-8083.log",
+            "error_file": "/Users/stone/workspace/ddfe/dd-meeting/log/err-8083.log",
+
+            *//*"script": "/home/work/experiment/stone/mdd/appStart.js",
+            "out_file": "/home/work/experiment/stone/mdd/log/app-8083.log",
+            "error_file": "/home/work/experiment/stone/mdd/log/err-8083.log",*//*
+            "port": "8083"
+        }*/
+    ],
+
+
+    /**
+     * PM2 help you to deploy apps over your servers
+     * For more help go to :
+     * https://github.com/Unitech/PM2/blob/master/ADVANCED_README.md#deployment-pm2--090
+     */
+    /*deploy : {
+        production : {
+            user : "work",
+            host : "192.168.1.225",
+            path : "/home/work/experiment/stone",
+            "post-deploy" : "pm2 startOrRestart ecosystem.json5 --env production"
+        }
+    }*/
+}

@@ -1,0 +1,45 @@
+
+    <div class="info">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="book-table">
+                <tr>
+                    <th width="20%">会议室名称</th>
+                    <th>已预定情况</th>
+                    <th width="10%">预定</th>
+                </tr>
+            {{#each data}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>
+                        <div class="book-info">
+                            {{#each bookInfo}}
+                            <div>
+                                <span>{{user}}: </span>
+                                <span>{{bgtime}} ~ {{endtime}} </span>
+                                {{#ifCond ../../name user}}
+                                    <a class="cancel-meeting-btn"
+                                       bookDate="{{bookdate}}" bookId="{{_id}}">取消</a>
+                                {{/ifCond}}
+                            </div>
+                            {{/each}}
+                        </div>
+                    </td>
+                    <td>
+                        {{#if ../name}}
+                        <a class="btn btn-primary book-meeting-btn"
+                            meetingId="{{id}}"
+                            meetingName="{{name}}"
+                            data-toggle="modal" data-target="#bookModal">预定</a>
+                        {{else}}
+                        <a class="btn btn-primary disabled book-meeting-btn"
+                            meetingId="{{id}}"
+                            meetingName="{{name}}"
+                            data-toggle="modal" data-target="#bookModal">预定</a>
+                        {{/if}}
+                    </td>
+                </tr>
+            {{/each}}
+            </table>
+        </div>
+    </div>
+

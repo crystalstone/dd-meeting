@@ -1,0 +1,41 @@
+<div class="header">
+    丁丁租房-会议预定系统
+    {{#if name}}
+        <span id="login-info" >{{name}}</span>
+        <span id="login" class="hide">登陆</span>
+    {{else}}
+        <span id="login-info" >{{name}}</span>
+        <span id="login" class="hide">登陆</span>
+    {{/if}}
+    <div class="modal fade bs-example-modal-sm" id="loginModal" meetingId="-1" role="dialog"
+         aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">登陆</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="meeting-name"></div>
+                    <div class="free-time"></div>
+                    <div class="chose-time">
+                        <div class="field">邮箱：<input type="email"
+                                                     id="login-field-email"
+                                                     class="form-control"
+                                                     placeholder="Email"/></div>
+                        <div class="field">姓名：<input class="form-control"
+                                                     id="login-field-name"
+                                                     type="datetime" /></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default"
+                            data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary"
+                            id="login-confirm"
+                            >确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
